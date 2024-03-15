@@ -1,5 +1,5 @@
 {
-    "name": "xunzhibin/micro-modules",
+    "name": "xzb/micro-modules",
     "autoload": {
         "psr-4": {
             "Xzb\\Modules\\": "src/"
