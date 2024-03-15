@@ -1,0 +1,15 @@
+{
+    "name": "xunzhibin/micro-modules",
+    "autoload": {
+        "psr-4": {
+            "Xzb\\Modules\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "xunzhibin",
+            "email": "xunzhibin@jnexpert.com"
+        }
+    ],
+    "require": {}
+}
