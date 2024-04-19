@@ -3,7 +3,7 @@
 // 命名空间
 namespace Xzb\Modules\Language\Services;
 
-use Xzb\MasterKey\Service;
+use Xzb\CodeIgniter3\Service;
 use Xzb\Modules\Language\Models\Language;
 
 /**
@@ -11,38 +11,38 @@ use Xzb\Modules\Language\Models\Language;
  */
 class LanguageService extends Service
 {
-	/**
-	 * 排序 列
-	 * 
-	 * @var array
-	 */
-	protected $sorts = [
-		'sort' => []
-	];
+	// /**
+	//  * 排序 列
+	//  * 
+	//  * @var array
+	//  */
+	// protected $sorts = [
+	// 	'sort' => []
+	// ];
 
-	/**
-	 * 是否开启 插入排序
-	 * 
-	 * @var bool
-	 */
-	protected $insertSorting = true;
+	// /**
+	//  * 是否开启 插入排序
+	//  * 
+	//  * @var bool
+	//  */
+	// protected $insertSorting = true;
 
-	/**
-	 * 唯一 列
-	 * 
-	 * @var array
-	 */
-	protected $uniques = [
-		'abbr'
-	];
+	// /**
+	//  * 唯一 列
+	//  * 
+	//  * @var array
+	//  */
+	// protected $uniques = [
+	// 	'abbr'
+	// ];
 
 
-	/**
-	 * 是否开启 唯一写入验证
-	 * 
-	 * @var bool
-	 */
-	protected $uniqueWriteVerify = true;
+	// /**
+	//  * 是否开启 唯一写入验证
+	//  * 
+	//  * @var bool
+	//  */
+	// protected $uniqueWriteVerify = true;
 
 	/**
 	 * 模糊匹配 列
@@ -50,15 +50,15 @@ class LanguageService extends Service
 	 * @var array
 	 */
 	protected $likes = [
-		'title'
+		'title', 'en_title'
 	];
 
-	/**
-	 * 查询 排序
-	 * 
-	 * @var string
-	 */
-	protected $querySort = '-sort';
+	// /**
+	//  * 查询 排序
+	//  * 
+	//  * @var string
+	//  */
+	// protected $querySort = '-sort';
 
 	/**
 	 * 构造函数
@@ -67,6 +67,10 @@ class LanguageService extends Service
 	 */
 	public function __construct()
 	{
+		// if (defined('CI_VERSION')) {
+		// 	$this->model = new Ci3Language;
+		// }
+
 		$this->model = new Language;
 	}
 
